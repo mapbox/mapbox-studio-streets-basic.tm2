@@ -20,7 +20,7 @@ interactivity_layer: ''
 layers: null
 maxzoom: 19
 minzoom: 0
-name: MapBox Streets
+name: Streets Classic
 source: "mapbox:///mapbox.mapbox-streets-v5"
 styles: 
   - vars.mss
