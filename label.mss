@@ -523,25 +523,30 @@
 // =====================================================================
 
 // highway shield
-#road_label[class='motorway'][reflen>0][reflen<=6],
-#road_label[class='main'][reflen>0][reflen<=6] {
-  shield-name: "[ref]";
+#road_label::shield-pt[zoom<=10][localrank=1],
+#road_label::shield-ln[zoom>=11] {
+  shield-name: "[ref].replace('·', '\n')";
   shield-size: 9;
-  shield-file: url('img/shield/generic-sm-[reflen].png');
-  shield-face-name: @sans_bold;
-  shield-fill: #555;
-  shield-spacing: 200;
-  shield-avoid-edges: true;
-  // Workaround for Mapnik bug where shields are placed slightly over the
-  // edge even when avoid-edges is true:
-  shield-min-padding: 5;
-  shield-min-distance: 40;
-  [zoom>=12] { shield-min-distance: 50; }
+  shield-line-spacing: -4;
+  shield-file: url('img/shield/[shield]-[reflen].svg');
+  shield-face-name: @sans;
+  shield-fill: #333;
   [zoom>=14] {
-    shield-spacing: 400;
-    shield-min-distance: 80;
+    shield-transform: scale(1.25,1.25);
     shield-size: 11;
-    shield-file: url('img/shield/generic-md-[reflen].png');
+  }
+}
+#road_label::shield-pt[zoom<=10][localrank=1] {
+  shield-placement: point;
+  shield-avoid-edges: false;
+}
+#road_label::shield-ln[zoom>=11] {
+  shield-placement: line;
+  shield-spacing: 400;
+  shield-min-distance: 40;
+  shield-avoid-edges: true;
+  [zoom>=14] {
+    shield-min-distance: 100;
   }
 }
 
