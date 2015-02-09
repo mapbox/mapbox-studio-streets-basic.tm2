@@ -69,39 +69,34 @@
 
 // 2_1__ Countries _____________________________________________________
 
-#country_label_line {
-  line-color: @admin_2;
-  line-opacity: 0.8;
-  line-width: 0.8;
-  line-dasharray: 5,2;
-}
-
-#country_label[zoom<=10] {
+#country_label[zoom>=2][zoom<=10] {
   text-name: @name;
   text-face-name: @sans_bold;
+  [zoom=2] { text-face-name: @sans; }
   text-placement: point;
-  [zoom=2] { text-opacity: 0.75; }
-  text-size: 10;
+  text-size: 9;
   text-fill: @country_text;
   text-halo-fill: @country_halo;
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
-  text-wrap-width: 30;
-  text-line-spacing: -2;
+  text-wrap-width: 20;
+  text-wrap-before: true;
+  text-line-spacing: -3;
   [scalerank=1] {
-    [zoom=2]  { text-size: 12; text-wrap-width: 60; }
     [zoom=3]  { text-size: 13; text-wrap-width: 60; }
     [zoom=4]  { text-size: 14; text-wrap-width: 90; }
     [zoom=5]  { text-size: 20; text-wrap-width: 120; }
     [zoom>=6] { text-size: 20; text-wrap-width: 120; }
   }
   [scalerank=2] {
+    [zoom=2]  { text-name: [abbr]; }
     [zoom=3]  { text-size: 12; }
     [zoom=4]  { text-size: 13; }
     [zoom=5]  { text-size: 17; }
     [zoom>=6] { text-size: 20; }
   }
   [scalerank=3] {
+    [zoom=3]  { text-name: [abbr]; }
     [zoom=4]  { text-size: 11; }
     [zoom=5]  { text-size: 15; }
     [zoom=6]  { text-size: 17; }
@@ -116,14 +111,13 @@
     [zoom>=9] { text-size: 20; text-wrap-width: 120; }
   }
   [scalerank=5] {
-    [zoom=5] { text-size: 12; }
+    [zoom=5] { text-size: 11; }
     [zoom=6] { text-size: 13; }
     [zoom=7] { text-size: 14; text-wrap-width: 60; }
     [zoom=8] { text-size: 16; text-wrap-width: 90; }
     [zoom>=9] { text-size: 18; text-wrap-width: 120; }
   }
   [scalerank>=6] {
-    [zoom=6] { text-size: 11; }
     [zoom=7] { text-size: 12; }
     [zoom=8] { text-size: 14; }
     [zoom>=9] { text-size: 16; }
@@ -134,14 +128,26 @@
 // 2_2__ States ________________________________________________________
 
 #state_label[zoom>=4][zoom<=10] {
-  text-name: @name;
+  text-name: [abbr];
   text-face-name: @sans_lt;
   text-placement: point;
   text-fill: @state_text;
-  text-halo-fill: @country_halo;
+  text-halo-fill: fadeout(@land,50%);
   text-halo-radius: 1.5;
   text-halo-rasterizer: fast;
   text-size: 10;
+  [zoom>=4][area>100000],
+  [zoom>=5][area>50000],
+  [zoom>=6][area>10000],
+  [zoom>=7][area<=10000] {
+    text-name: [abbr];
+  }
+  [zoom>=5][area>100000],
+  [zoom>=6][area>50000],
+  [zoom>=7][area>10000],
+  [zoom>=8][area<=10000] {
+    text-name: @name;
+  }
   [zoom>=5][zoom<=6] {
     [area>10000] { text-size: 12; }
     [area>50000] { text-size: 14; }
