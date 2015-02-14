@@ -17,7 +17,6 @@
 // 1__ OCEAN & MARINE LABELS
 // =====================================================================
 
-
 #marine_label[zoom>=2]["mapnik::geometry_type"=1],
 #marine_label[zoom>=2]["mapnik::geometry_type"=2] {
   text-name: @name;
@@ -83,20 +82,20 @@
   text-wrap-before: true;
   text-line-spacing: -3;
   [scalerank=1] {
-    [zoom=3]  { text-size: 13; text-wrap-width: 60; }
+    [zoom=3]  { text-size: 12; text-wrap-width: 60; }
     [zoom=4]  { text-size: 14; text-wrap-width: 90; }
     [zoom=5]  { text-size: 20; text-wrap-width: 120; }
     [zoom>=6] { text-size: 20; text-wrap-width: 120; }
   }
   [scalerank=2] {
-    [zoom=2]  { text-name: [abbr]; }
-    [zoom=3]  { text-size: 12; }
+    [zoom=2]  { text-name: [code]; }
+    [zoom=3]  { text-size: 11; }
     [zoom=4]  { text-size: 13; }
     [zoom=5]  { text-size: 17; }
     [zoom>=6] { text-size: 20; }
   }
   [scalerank=3] {
-    [zoom=3]  { text-name: [abbr]; }
+    [zoom=3]  { text-name: [code]; }
     [zoom=4]  { text-size: 11; }
     [zoom=5]  { text-size: 15; }
     [zoom=6]  { text-size: 17; }
@@ -132,8 +131,8 @@
   text-face-name: @sans_lt;
   text-placement: point;
   text-fill: @state_text;
-  text-halo-fill: fadeout(@land,50%);
-  text-halo-radius: 1.5;
+  text-halo-fill: fadeout(lighten(@land,5%),50%);
+  text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 10;
   [zoom>=4][area>100000],
@@ -215,13 +214,13 @@
 
 // For medium to high zoom levels we do away with the dot
 // and center place labels on their point location.
-#place_label[type='city'][zoom>=8][zoom<=15][localrank<=2] {
+#place_label[type='city'][zoom>=8][zoom<=15][localrank=1] {
   text-name: @name;
   text-face-name: @sans;
   text-placement: point;
   text-fill: @city_text;
   text-halo-fill: #fff;
-  text-halo-radius: 2;
+  text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-wrap-width: 40;
   text-line-spacing: -4;
@@ -269,6 +268,7 @@
     [scalerank>=6] { text-size: 17; }
   }
   [zoom=13] {
+    text-fill: mix(@city_text,@land,80);
     text-size: 18;
     text-wrap-width: 200;
     [scalerank>=0][scalerank<=1] { text-size: 20; }
@@ -277,7 +277,7 @@
     [scalerank>=6] { text-size: 17; }
   }
   [zoom=14] {
-    text-fill: lighten(@city_text,10);
+    text-fill: mix(@city_text,@land,60);
     text-size: 19;
     text-wrap-width: 300;
     [scalerank>=0][scalerank<=1] { text-size: 20; }
@@ -286,7 +286,7 @@
     [scalerank>=6] { text-size: 18; }
   }
   [zoom=15] {
-    text-fill: lighten(@city_text,10);
+    text-fill: mix(@city_text,@land,40);
     text-size: 20;
     text-wrap-width: 400;
     [scalerank>=0][scalerank<=1] { text-size: 20; }
@@ -298,31 +298,43 @@
 
 // 2_4__ Towns _________________________________________________________
 
-#place_label[type='town'][zoom>=8][zoom<=17][localrank<=2] {
+#place_label[type='town'][zoom>=8][zoom<=17][localrank<=1] {
   text-name: @name;
   text-face-name: @sans;
   text-placement: point;
   text-fill: @town_text;
   text-halo-fill: @town_halo;
-  text-halo-radius: 1.5;
+  text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-wrap-width: 75;
   text-wrap-before: true;
   text-line-spacing: -4;
   text-size: 11;
   [zoom>=8] { text-size: 12; }
-  [zoom>=10] { text-size: 13; text-halo-radius: 2; }
+  [zoom>=10] { text-size: 13; }
   [zoom>=11] { text-size: 14; }
   [zoom>=12] { text-size: 15; text-wrap-width: 80; }
-  [zoom>=13] { text-size: 16; text-wrap-width: 120; }
-  [zoom>=14] { text-size: 18; text-wrap-width: 160; }
-  [zoom>=15] { text-size: 20; text-wrap-width: 200; }
+  [zoom>=13] {
+    text-fill: mix(@city_text,@land,80);
+    text-size: 16;
+    text-wrap-width: 120;
+  }
+  [zoom>=14] {
+    text-fill: mix(@city_text,@land,60);
+    text-size: 18;
+    text-wrap-width: 160;
+  }
+  [zoom>=15] {
+    text-fill: mix(@city_text,@land,40);
+    text-size: 20;
+    text-wrap-width: 200;
+  }
   [zoom>=16] { text-size: 22; text-wrap-width: 240; }
 }
 
 // 2_5 Villages ______________________________________________________
 
-#place_label[type='village'][zoom>=10][zoom<=14][localrank<=2],
+#place_label[type='village'][zoom>=10][zoom<=14][localrank<=1],
 #place_label[type='village'][zoom>=15][zoom<=17] {
   text-name: @name;
   text-face-name: @sans;
@@ -400,15 +412,15 @@
   [zoom=17][area>10000],
   [zoom>=18][area>0]{
     text-name: @name;
-    text-halo-radius: 1.5;
+    text-fill: lighten(@water,25);
+    text-halo-fill: darken(@water,10);
+    text-halo-radius: 1;
     text-halo-rasterizer: fast;
     text-size: 11;
     text-wrap-width: 50;
     text-wrap-before: true;
-    text-halo-fill: #fff;
     text-line-spacing: -2;
     text-face-name: @sans_italic;
-    text-fill: @water * 0.75;
   }
   [zoom>=14][area>3200000],
   [zoom>=15][area>800000],
@@ -424,7 +436,6 @@
   [zoom>=18][area>50000] {
     text-size: 14;
     text-wrap-width: 100;
-    text-halo-radius: 2;
   }
   [zoom>=16][area>3200000],
   [zoom>=17][area>800000],
@@ -446,9 +457,9 @@
   text-avoid-edges: true;
   text-name: @name;
   text-face-name: @sans_italic;
-  text-fill: @water * 0.75;
-  text-halo-fill: fadeout(#fff,80%);
-  text-halo-radius: 1.5;
+  text-fill: lighten(@water,25);
+  text-halo-fill: darken(@water,10);
+  text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-placement: line;
   text-size: 10;
@@ -476,8 +487,8 @@
 // =====================================================================
 
 // highway shield
-#road_label::shield-pt[zoom<=10][localrank=1],
-#road_label::shield-ln[zoom>=11] {
+#road_label::shield-pt[zoom>=7][zoom<=10][localrank=1][reflen<=6],
+#road_label::shield-ln[zoom>=11][reflen<=6] {
   shield-name: "[ref].replace('·', '\n')";
   shield-size: 9;
   shield-line-spacing: -4;
@@ -489,18 +500,15 @@
     shield-size: 11;
   }
 }
-#road_label::shield-pt[zoom<=10][localrank=1] {
+#road_label::shield-pt[zoom>=7][zoom<=10][localrank=1][reflen<=6] {
   shield-placement: point;
   shield-avoid-edges: false;
 }
-#road_label::shield-ln[zoom>=11] {
+#road_label::shield-ln[zoom>=11][reflen<=6] {
   shield-placement: line;
   shield-spacing: 400;
-  shield-min-distance: 40;
+  shield-min-distance: 100;
   shield-avoid-edges: true;
-  [zoom>=14] {
-    shield-min-distance: 100;
-  }
 }
 
 // regular labels

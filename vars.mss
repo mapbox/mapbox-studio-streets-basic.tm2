@@ -100,10 +100,10 @@
 @country_text:      @land * 0.2;
 @country_halo:      @place_halo;
 
-@state_text:        #666;
+@state_text:        #765;
 @state_halo:        @place_halo;
 
-@city_text:         @land * 0.1;
+@city_text:         #000;
 @city_halo:         @place_halo;
 
 @town_text:         @land * 0.2;
