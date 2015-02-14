@@ -31,7 +31,7 @@
 @wooded:            #3A6;
 @industrial:        #DDDCDC;
 @agriculture:       #EAE0D0;
-@snow:              #EDE5DD;
+@snow:              #E8EFEF;
 
 @building:          darken(@land, 8);
 @hospital:          #F2E3E1;
