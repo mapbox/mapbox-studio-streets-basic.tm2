@@ -59,11 +59,11 @@
 
 @main_line:     #fff;
 @main_fill:     #fff;
-@main_case:     #000;
+@main_case:     #333;
 
 @road_line:     #fff;
 @road_fill:     #fff;
-@road_case:     #000;
+@road_case:     #666;
 
 @pedestrian_line:   #fff;
 @pedestrian_fill:   @pedestrian_line;
