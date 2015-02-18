@@ -21,7 +21,7 @@ layers: null
 maxzoom: 19
 minzoom: 0
 name: Streets Classic
-source: "mapbox:///mapbox.mapbox-streets-v5"
+source: "mapbox:///mapbox.mapbox-streets-v6"
 styles: 
   - vars.mss
   - bg.mss
