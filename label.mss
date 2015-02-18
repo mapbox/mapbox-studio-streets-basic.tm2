@@ -134,7 +134,7 @@
   text-halo-fill: fadeout(lighten(@land,5%),50%);
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
-  text-size: 10;
+  text-size: 9;
   [zoom>=4][area>100000],
   [zoom>=5][area>50000],
   [zoom>=6][area>10000],
@@ -176,7 +176,7 @@
   // to use shaves a bit off the final project.xml size
   [ldir='N'],[ldir='S'],[ldir='E'],[ldir='W'],
   [ldir='NE'],[ldir='SE'],[ldir='SW'],[ldir='NW'] {
-    shield-file: url("img/icon/dot-small.png");
+    shield-file: url("img/icon/dot.svg");
     shield-unlock-image: true;
     shield-name: @name;
     shield-face-name: @sans;
@@ -184,7 +184,6 @@
     shield-fill: @city_text;
     shield-halo-fill: #fff;
     shield-halo-radius: 1.5;
-    shield-min-distance: 3;
     shield-wrap-width: 40;
     shield-line-spacing: -4;
     shield-size: 11;
@@ -201,13 +200,13 @@
       [scalerank>=3][scalerank<=5] { shield-size: 13; }
       [scalerank>=6] { shield-size: 12; }
     }
-    [ldir='E'] { shield-text-dx: 5; }
-    [ldir='W'] { shield-text-dx: -5; }
-    [ldir='N'] { shield-text-dy: -5; }
-    [ldir='S'] { shield-text-dy: 8; }
+    [ldir='E'] { shield-text-dx: 4; }
+    [ldir='W'] { shield-text-dx: -4; }
+    [ldir='N'] { shield-text-dy: -4; }
+    [ldir='S'] { shield-text-dy: 4; }
     [ldir='NE'] { shield-text-dx: 4; shield-text-dy: -3; }
     [ldir='SE'] { shield-text-dx: 4; shield-text-dy: 5; }
-    [ldir='SW'] { shield-text-dx: -4; shield-text-dy: 5; }
+    [ldir='SW'] { shield-text-dx: -3; shield-text-dy: 3; }
     [ldir='NW'] { shield-text-dx: -4; shield-text-dy: -3; }
   }
 }
