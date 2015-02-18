@@ -119,6 +119,7 @@ Map { background-color: @land; }
   [class='glacier'],
   [class='piste'] {
     polygon-fill: @snow;
+    polygon-opacity: 0.5;
   }
   [class='park'] {
     polygon-fill: @park;
