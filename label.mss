@@ -486,7 +486,8 @@
 // =====================================================================
 
 // highway shield
-#road_label::shield-pt[zoom>=7][zoom<=10][localrank=1][reflen<=6],
+#road_label::shield-pt[class='motorway'][zoom>=7][zoom<=10][localrank=1][reflen<=6],
+#road_label::shield-pt[class='motorway'][zoom>=9][zoom<=10][localrank=1][reflen<=6],
 #road_label::shield-ln[zoom>=11][reflen<=6] {
   shield-name: "[ref].replace('·', '\n')";
   shield-size: 9;
@@ -499,7 +500,8 @@
     shield-size: 11;
   }
 }
-#road_label::shield-pt[zoom>=7][zoom<=10][localrank=1][reflen<=6] {
+#road_label::shield-pt[class='motorway'][zoom>=7][zoom<=10][localrank=1][reflen<=6],
+#road_label::shield-pt[class='motorway'][zoom>=9][zoom<=10][localrank=1][reflen<=6] {
   shield-placement: point;
   shield-avoid-edges: false;
 }
