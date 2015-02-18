@@ -20,8 +20,8 @@ interactivity_layer: ''
 layers: null
 maxzoom: 19
 minzoom: 0
-name: Streets Basic
-source: "mapbox:///mapbox.mapbox-streets-v6"
+name: Streets Classic
+source: "mapbox:///mapbox.mapbox-streets-v5"
 styles: 
   - vars.mss
   - bg.mss
