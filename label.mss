@@ -135,12 +135,6 @@
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 9;
-  [zoom>=4][area>100000],
-  [zoom>=5][area>50000],
-  [zoom>=6][area>10000],
-  [zoom>=7][area<=10000] {
-    text-name: [abbr];
-  }
   [zoom>=5][area>100000],
   [zoom>=6][area>50000],
   [zoom>=7][area>10000],
