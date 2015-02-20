@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="8"
-     inkscape:cx="20.530485"
-     inkscape:cy="18.306677"
+     inkscape:zoom="45.254834"
+     inkscape:cx="13.245086"
+     inkscape:cy="28.891476"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -65,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -97,18 +97,28 @@
        y="894.36218"
        rx="1"
        ry="0.99999738" />
-    <text
-       xml:space="preserve"
+    <g
+       transform="scale(1.016077,0.98417739)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.16156769px;line-height:125%;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans';letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="299.0787"
-       y="914.65356"
-       id="text4827"
-       sodipodi:linespacing="125%"
-       transform="scale(1.016077,0.98417739)"><tspan
-         sodipodi:role="line"
-         id="tspan4829"
-         x="299.0787"
-         y="914.65356"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.59279442px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';letter-spacing:-0.2px;fill:#4d4d4d;fill-opacity:1">ALT.</tspan></text>
+       id="text4827">
+      <path
+         d="m 302.35579,914.65356 -0.32192,-1.12026 -1.62244,0 -0.32514,1.12026 -1.00759,0 1.5291,-4.72569 1.22005,0 1.53553,4.72569 z m -0.55369,-1.95723 -0.5795,-2.10532 -0.56978,2.10532 1.14924,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.59279442px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';letter-spacing:-0.2px;fill:#4d4d4d;fill-opacity:1"
+         id="path3367"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccccccccccccc" />
+      <path
+         d="m 303.75892,914.65356 0,-4.70638 0.99793,0 0,3.88229 1.71258,0 0,0.82409 -2.71051,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.59279442px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';letter-spacing:-0.2px;fill:#4d4d4d;fill-opacity:1"
+         id="path3369" />
+      <path
+         d="m 308.40372,914.65356 -0.99471,0 0,-3.87584 -1.18143,0 0,-0.83054 3.35435,0 0,0.83054 -1.17821,0 0,3.87584 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.59279442px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';letter-spacing:-0.2px;fill:#4d4d4d;fill-opacity:1"
+         id="path3371" />
+      <path
+         d="m 309.56863,914.19323 q 0,-0.1513 0.0419,-0.25431 0.0451,-0.10624 0.12233,-0.17062 0.0773,-0.0644 0.18027,-0.0933 0.10301,-0.029 0.22212,-0.029 0.11267,0 0.21247,0.029 0.10301,0.029 0.18027,0.0933 0.0773,0.0644 0.12233,0.17062 0.0451,0.10301 0.0451,0.25431 0,0.14486 -0.0451,0.24787 -0.0451,0.10301 -0.12233,0.17062 -0.0773,0.0676 -0.18027,0.0966 -0.0998,0.0322 -0.21247,0.0322 -0.11911,0 -0.22212,-0.0322 -0.10301,-0.029 -0.18027,-0.0966 -0.0773,-0.0676 -0.12233,-0.17062 -0.0419,-0.10301 -0.0419,-0.24787 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.59279442px;font-family:'Droid Sans';-inkscape-font-specification:'Droid Sans Bold';letter-spacing:-0.2px;fill:#4d4d4d;fill-opacity:1"
+         id="path3373" />
+    </g>
   </g>
 </svg>
