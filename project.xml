@@ -15,6 +15,7 @@
 
 <FontSet name="fontset-0">
   <Font face-name="Open Sans Bold"/>
+  <Font face-name="Arial Unicode MS Bold"/>
   <Font face-name="Arial Unicode MS Regular"/>
 </FontSet>
 <FontSet name="fontset-1">

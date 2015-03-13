@@ -13,7 +13,7 @@
 @sans_lt:           "Open Sans Regular","Arial Unicode MS Regular";
 @sans_lt_italic:    "Open Sans Italic","Arial Unicode MS Regular";
 @sans:              "Open Sans Semibold","Arial Unicode MS Regular";
-@sans_bold:         "Open Sans Bold","Arial Unicode MS Regular";
+@sans_bold:         "Open Sans Bold","Arial Unicode MS Bold","Arial Unicode MS Regular";
 @sans_italic:       "Open Sans Semibold Italic","Arial Unicode MS Regular";
 @sans_bold_italic:  "Open Sans Bold Italic","Arial Unicode MS Regular";
 
